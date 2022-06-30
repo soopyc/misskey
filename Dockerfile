@@ -11,13 +11,15 @@ FROM base AS builder
 RUN apk add --no-cache $BUILD_DEPS
 
 COPY package.json ./
-COPY packages/backend/package.json ./packages/backend/package.json
-COPY packages/client/package.json ./packages/client/package.json
-COPY packages/sw/package.json ./packages/sw/package.json
-
 RUN NO_POSTINSTALL=1 yarn install
+
+COPY packages/backend/package.json ./packages/backend/package.json
 RUN cd packages/backend && yarn --force install
+
+COPY packages/client/package.json ./packages/client/package.json
 RUN cd packages/client && yarn install
+
+COPY packages/sw/package.json ./packages/sw/package.json
 RUN cd packages/sw && yarn install
 
 COPY . ./
