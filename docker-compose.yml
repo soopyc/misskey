@@ -9,7 +9,7 @@ services:
       - redis
 #      - es
     ports:
-      - "3000:3000"
+      - "32120:3000"
     networks:
       - internal_network
       - external_network
