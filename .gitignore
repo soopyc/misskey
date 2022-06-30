@@ -16,6 +16,7 @@ cypress/videos
 # config
 /.config/*
 !/.config/example.yml
+!/.config/example-docker.yml
 !/.config/docker_example.env
 
 # misskey
