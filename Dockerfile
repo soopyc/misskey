@@ -23,12 +23,12 @@ COPY packages/backend/package.json ./packages/backend/package.json
 COPY packages/client/package.json ./packages/client/package.json
 COPY packages/sw/package.json ./packages/sw/package.json
 
-RUN yarn install
+# RUN yarn install
 
-# RUN NO_POSTINSTALL=1 yarn install
-# RUN cd packages/backend && yarn --force install
-# RUN cd packages/client && yarn install
-# RUN cd packages/sw && yarn install
+RUN NO_POSTINSTALL=1 yarn install
+RUN cd packages/backend && yarn --force install
+RUN cd packages/client && yarn install
+RUN cd packages/sw && yarn install
 
 COPY . ./
 
