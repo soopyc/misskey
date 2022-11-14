@@ -1,3 +1,8 @@
+# Archived
+This repository is archived. Please see https://patchy.soopy.moe/mizuki/calckey for the current version.
+
+<hr>
+
 <div align="center">
 <a href="https://misskey-hub.net">
 	<img src="./assets/title_float.svg" alt="Misskey logo" style="border-radius:50%" width="400"/>
